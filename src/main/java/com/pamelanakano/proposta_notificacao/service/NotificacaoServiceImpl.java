@@ -23,18 +23,18 @@ public class NotificacaoServiceImpl implements NotificacaoService {
     }
 
     public void enviarEmail(String assuntoEmail, String corpoEmail, String emailUsuario) {
-
-        try {
-            var message = new SimpleMailMessage();
-            message.setFrom(username);
-            message.setTo(emailUsuario);
-            message.setSubject(assuntoEmail);
-            message.setText(corpoEmail);
-            mailSender.send(message);
-        } catch (Exception e) {
-            logger.error("Erro ao enviar e-mail: " + e.getMessage());
+        if (emailUsuario != null && !emailUsuario.trim().isEmpty()) {
+            try {
+                var message = new SimpleMailMessage();
+                message.setFrom(username);
+                message.setTo(emailUsuario);
+                message.setSubject(assuntoEmail);
+                message.setText(corpoEmail);
+                mailSender.send(message);
+            } catch (Exception e) {
+                logger.error("Erro ao enviar e-mail: " + e.getMessage());
+            }
         }
-
     }
 
 }
