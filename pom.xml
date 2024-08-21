@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.pamelanakano</groupId>
 	<artifactId>proposta-notificacao</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>proposta-notificacao</name>
 	<description>Notifica por email o usuário</description>
 	<url/>
