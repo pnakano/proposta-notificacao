@@ -30,7 +30,9 @@ public class MensagemConstants {
             Prezado(a) %s,
             
             Infelizmente, sua proposta foi REPROVADA.
-            Mas não disista ainda!
+            Motivo: %s
+            
+            Mas não desista ainda!
             
             Você pode tentar uma nova simulação com valores ou prazos diferentes.
             
