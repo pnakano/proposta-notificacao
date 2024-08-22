@@ -25,7 +25,9 @@ public class PropostaConcluidaListener {
             corpoEmail = String.format(MensagemConstants.PROPOSTA_APROVADA, proposta.getUsuario().getNome());
         } else {
             Optional<String> observacao = Optional.ofNullable(proposta.getObservacao());
-            corpoEmail = String.format(MensagemConstants.PROPOSTA_REPROVADA, proposta.getUsuario().getNome(), observacao);
+            corpoEmail = String.format(MensagemConstants.PROPOSTA_REPROVADA,
+                    proposta.getUsuario().getNome(),
+                    observacao.map(s -> "Motivo: " + s).orElse(""));
         }
         notificacaoService.enviarEmail(assuntoEmail, corpoEmail, proposta.getUsuario().getEmail());
     }
