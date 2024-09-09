@@ -35,7 +35,7 @@ Este é o microsserviço de notificao, fazendo uso do Spring Email para disparar
 - Configuração do docker-compose para que a aplicação funcione totalmente em containers
 - Aplicação Front-end em Angular para cadastro das propostas
 
-## Requirements
+## Requisitos
 
 - [JDK 17](https://www.oracle.com/br/java/technologies/javase/jdk17-archive-downloads.html)
 - [Docker](https://hub.docker.com/)
@@ -54,7 +54,7 @@ docker run --name rabbit-mq -d -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
 `com.pamelanakano.proposta_notificacao.PropostaNotificacaoApplication`
 
-## Environment variables
+## Variáveis de Ambiente
 
 | Name           | Value                 |
 |----------------|---------------------  |
